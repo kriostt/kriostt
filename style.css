@@ -4,7 +4,7 @@ nav {
     display: flex;
     margin-bottom: 10px;
     border-radius: 10px;
-  }
+}
 
 nav ul {
   padding: 0;
@@ -19,12 +19,23 @@ nav li {
   flex: 1;
 }
 
+main {
+    display: flex;
+    
+}
+  
+  article {
+    flex: 4;
+    border-radius: 10px;
+}
+
 aside {
     flex: 1;
     margin-left: 10px;
     background-color: #518888;
     border-radius: 10px;
-  }
+}
   
-  aside li {
-    padding-bottom: 10px;}
+aside li {
+    padding-bottom: 10px;
+}
