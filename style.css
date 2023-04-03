@@ -18,3 +18,13 @@ nav li {
   text-align: center;
   flex: 1;
 }
+
+aside {
+    flex: 1;
+    margin-left: 10px;
+    background-color: #518888;
+    border-radius: 10px;
+  }
+  
+  aside li {
+    padding-bottom: 10px;
