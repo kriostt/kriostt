@@ -1,54 +1,100 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="winter2023style.css">
+    <link rel="stylesheet" href="navstyle.css">
     <title>CPRO 1121</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="winter2023.html">Winter 2023</a></li>
-        <li><a href="fall2023.html">Fall 2023</a></li>
-        <li><a href="winter2024.html">Winter 2024</a></li>
-        <li><a href="fall2024.html">Fall 2024</a></li>
-      </ul>
-    </nav>
+    <div class="parent">
+      <nav class="navigation" id="nav">
+        <a href="index.html">Home</a>
+        <a href="winter2023.html" class="active">Winter 2023</a>
+        <a href="fall2023.html">Fall 2023</a>
+        <a href="winter2024.html">Winter 2024</a>
+        <a href="fall2024.html">Fall 2024</a>
+        <a href="javascript:void(0)" class="hamburger" onclick="nav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
 
-    <header><h1>CPRO 1121 | Problem Solving / Program Logic</h1></header>
+      <span style="font-size:40px;cursor:pointer" class='openbtn' onclick="openNav()">&gt;</span>
 
-    <main>
-      <article>
-        <h2>Course Description</h2>
-          <p>This course introduces computer-based concepts of problem-solving, structured programming logic and techniques, algorithm development, and program design.</p>
-          <p>Topics include program flowcharting, algorithms, input/output techniques, looping, functions, selection structures, file handling, control breaks, pseudo coding, and user documentation.</p>
-          <p>Credits: 3 | Prerequisite: None | Co-requisite: CPRO 1201</p>
-
-        <h2>Learning Outcomes</h2>
-          <ul>
-            <li>Design programs using a top-down modernized approach.</li>
-            <li>Control the flow of a program with decision and repetitive structures.</li>
-            <li>Demonstrate the use of logic and problem-solving principles as they relate to computer programming.</li>
-            <li>Develop programs that process data from files including control break processing.</li>
-            <li>Design and imprement algorithms.</li>
-            <li>Understand functions, argument passing, and return types.</li>
-          </ul>
-      </article>
-
-      <aside>
-        <ul>
-          <li><a href="cpro1101.html">CPRO 1101</a></li>
-          <li>CPRO 1121</li>
-          <li><a href="cpro1122.html">CPRO 1122</a></li>
-          <li><a href="cpro1201.html">CPRO 1201</a></li>
-          <li><a href="cpro1301.html">CPRO 1301</a></li>
-        </ul>
+      <aside class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cpro1101.html">CPRO 1101</a>
+        <a href="cpro1121.html" class="active">CPRO 1121</a>
+        <a href="cpro1122.html">CPRO 1122</a>
+        <a href="cpro1201.html">CPRO 1201</a>
+        <a href="cpro1301.html">CPRO 1301</a>
       </aside>
-    </main>
-		
-		<footer>(C) Krisanne 2023.</footer>
+
+      <main>
+        <header><h1>CPRO 1121 | Problem Solving / Program Logic</h1></header>
+        <p>
+          This class was as enjoyable as I thought it would be.
+          To be clear, that's a good thing!
+          As someone that enjoys solving puzzles, I found that the exercises and assignments in this class were almost like a fun game of sudoku.
+          Although drawing the flowcharts was quite confusing at first, it was still interesting to try and figure out what order of events logically makes sense to solve the problem at hand.
+          I think this class did a great job on introducing me to the skills that are needed to be a computer programmer.
+        </p>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="cpro1121_flowchart_small.jpg">
+            <source media="(min-width: 930px)" srcset="cpro1121_flowchart.jpg">
+            <img src="cpro1121_flowchart.jpg" alt="A flowchart">
+          </picture>
+          <figcaption>One of the flowcharts I needed to make for an assignment!</figcaption>
+        </figure>
+        <br>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="cpro1121_pseudocode_small.jpg">
+            <source media="(min-width: 930px)" srcset="cpro1121_pseudocode.jpg">
+            <img src="cpro1121_pseudocode.jpg" alt="Pseudocode">
+          </picture>
+          <figcaption>The pseudocode for one of my assignments!</figcaption>
+        </figure>
+        <br>
+      </main>
+      
+      <footer>
+        For any inquiries, reach me at:
+        <br>email | krisanne.apostol@rdpolytech.ca 
+        <br>phone | 403-848-3915
+        <br>
+        Copyright © 2023 Krisanne Apostol.
+      </footer>
+    </div>
+    <script>
+      function nav() {
+        var x = document.getElementById("nav");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
+      }
+      function openNav() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>   
   </body>
 </html>

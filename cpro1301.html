@@ -1,55 +1,101 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="winter2023style.css">
+    <link rel="stylesheet" href="navstyle.css">
     <title>CPRO 1301</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="winter2023.html">Winter 2023</a></li>
-				<li><a href="fall2023.html">Fall 2023</a></li>
-				<li><a href="winter2024.html">Winter 2024</a></li>
-				<li><a href="fall2024.html">Fall 2024</a></li>
-			</ul>
-		</nav>
-			
-		<header><h1>CPRO 1301 | Database Design and SQL</h1></header>
+		<div class="parent">
+      <nav class="navigation" id="nav">
+        <a href="index.html">Home</a>
+        <a href="winter2023.html" class="active">Winter 2023</a>
+        <a href="fall2023.html">Fall 2023</a>
+        <a href="winter2024.html">Winter 2024</a>
+        <a href="fall2024.html">Fall 2024</a>
+        <a href="javascript:void(0)" class="hamburger" onclick="nav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
 
-		<main>
-			<article>
-				<h2>Course Description</h2>
-					<p>Explore relational database design and Structure Query Language (SQL) to construct models, modify database objects, and develop database applications.</p>
-					<p>Topics include SQL, relational databases, data retrieval and management, system development life cycle, DDL statements, database objects, databse security, control structures, and documentation.</p>
-					<p>Credits: 3 | Prerequisite: None | Co-requisite: None</p>
+      <span style="font-size:40px;cursor:pointer" class='openbtn' onclick="openNav()">&gt;</span>
 
-				<h2>Course Learning Outcomes</h2>
-					<ul>
-						<li>Explain the role of structured query language and relational databases.</li>
-						<li>Amalyze user requirements and construct data models using entity-relationship diagrams (ERD).</li>
-						<li>Use Data Definition Language (DDL) to create and modify the structure of database objects.</li>
-						<li>Use Data Manipulation Language (DML) to add, delete, and modify data in a database.</li>
-						<li>Prepare technical documentation for a database project.</li>
-						<li>Develop single-table and multiple-table databse queries.</li>
-						<li>Implement views and indexes.</li>
-					</ul>
-			</article>
+      <aside class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cpro1101.html">CPRO 1101</a>
+        <a href="cpro1121.html">CPRO 1121</a>
+        <a href="cpro1122.html">CPRO 1122</a>
+        <a href="cpro1201.html">CPRO 1201</a>
+        <a href="cpro1301.html" class="active">CPRO 1301</a>
+      </aside>
 
-			<aside>
-				<ul>
-					<li><a href="cpro1101.html">CPRO 1101</a></li>
-					<li><a href="cpro1121.html">CPRO 1121</a></li>
-					<li><a href="cpro1122.html">CPRO 1122</a></li>
-					<li><a href="cpro1201.html">CPRO 1201</a></li>
-					<li>CPRO 1301</li>
-				</ul>
-			</aside>
-		</main>
+			<main>
+				<header><h1>CPRO 1301 | Database Design and SQL</h1></header>
+        <p>
+          I'm not going to lie, understanding this class was like learning a new language. 
+          Everything was just so new to me.
+          The jargon used was especially frustrating because words of no meaning to me would be used to explain another completely new concept.
+          I read the slides provided, I read the textbook recommended, and I even searched the web, but this class was just so hard to comprehend at the start.
+          Fortunately, I did slowly start to understand the concepts.
+          I even made a database all by myself! 
+				</p>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="cpro1301_erd_small.jpg">
+            <source media="(min-width: 930px)" srcset="cpro1301_erd.jpg">
+            <img src="cpro1301_erd.jpg" alt="An Entity-Relationship Diagram for a database">
+          </picture>
+          <figcaption>The Entity-Relationship Diagram for my second assignment in this class!</figcaption>
+        </figure>
+        <br>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="cpro1301_sql_small.jpg">
+            <source media="(min-width: 930px)" srcset="cpro1301_sql.jpg">
+            <img src="cpro1301_sql.jpg" alt="SQL statements in SQL Server Management Studio" >
+          </picture>
+          <figcaption>Some SQL statements that I needed to demonstrate to show that the database I made works as it should!</figcaption>
+        </figure>
+        <br>
+			</main>
 
-		<footer>(C) Krisanne 2023.</footer>
+			<footer>
+				For any inquiries, reach me at:
+				<br>email | krisanne.apostol@rdpolytech.ca 
+				<br>phone | 403-848-3915
+				<br>
+				Copyright © 2023 Krisanne Apostol.
+			</footer>
+		</div>
+		<script>
+      function nav() {
+        var x = document.getElementById("nav");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
+      }
+      function openNav() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>  
 	</body>
 </html>

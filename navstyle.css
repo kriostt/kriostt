@@ -1,0 +1,50 @@
+/* NAVIGATION */
+nav > a {
+	display: inline;
+	padding: 12px 16px;
+	color: black;
+	text-decoration: none;
+}
+
+nav > a.hamburger {
+	display: none;
+}
+
+nav > a:hover {
+	background-color: #F79B83;
+	color: #D9EEB6;
+}
+
+nav > a.active {
+	background-color: #D9EEB6;
+}
+
+@media screen and (max-width: 900px) {
+	nav a:not(:first-child) { 
+		display: none; 
+	}
+	nav a { 
+		float: left; 
+		padding: 15px; 
+	}
+	nav a.hamburger { 
+		float: left;
+		display: block; 
+	}
+}
+
+@media screen and (max-width: 900px) {
+	nav.responsive {
+		position: relative;
+	}
+	nav.responsive .hamburger {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	nav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}    

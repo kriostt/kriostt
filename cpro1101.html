@@ -1,54 +1,99 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="winter2023style.css">
+    <link rel="stylesheet" href="navstyle.css">
     <title>CPRO 1101</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="winter2023.html">Winter 2023</a></li>
-        <li><a href="fall2023.html">Fall 2023</a></li>
-        <li><a href="winter2024.html">Winter 2024</a></li>
-        <li><a href="fall2024.html">Fall 2024</a></li>
-      </ul>
-    </nav>
-    
-    <header><h1>CPRO 1101 | Front End Web Development I</h1></header>
+    <div class="parent">
+      <nav class="navigation" id="nav">
+        <a href="index.html">Home</a>
+        <a href="winter2023.html" class="active">Winter 2023</a>
+        <a href="fall2023.html">Fall 2023</a>
+        <a href="winter2024.html">Winter 2024</a>
+        <a href="fall2024.html">Fall 2024</a>
+        <a href="javascript:void(0)" class="hamburger" onclick="nav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
 
-    <main>
-      <article>
-        <h2>Course Description</h2>
-          <p>Use modern web technologies to create, format, design, and publish webpages.</p>
-          <p>Topics include ethics, site management, information literacy, website usability, graphic design, web design and development process, HTML and CSS, and JavaScript programming.</p>
-          <p>Credits: 3 | Prerequisite: None | Co-requisite: None</p>
+      <span style="font-size:40px;cursor:pointer" class='openbtn' onclick="openNav()">&gt;</span>
 
-        <h2>Learning Outcomes</h2>
-          <ul>
-            <li>Create web pages using HTML and other tools.</li>
-            <li>Implement Cascading Style Sheets (CSS) to format web pages.</li>
-            <li>Design and publish a website according to client requirements.</li>
-            <li>Evaluate strategies for communicating information effectively using web technologies.</li>
-            <li>Examine different languages and frameworks for constructing websites and mobile applications.</li>
-            <li>Explain the principles of responsive and optimized web design.</li>
-          </ul>
-      </article>
-
-      <aside>
-        <ul>
-          <li>CPRO 1101</li>
-          <li><a href="cpro1121.html">CPRO 1121</a></li>
-          <li><a href="cpro1122.html">CPRO 1122</a></li>
-          <li><a href="cpro1201.html">CPRO 1201</a></li>
-          <li><a href="cpro1301.html">CPRO 1301</a></li>
-        </ul>
+      <aside class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cpro1101.html" class="active">CPRO 1101</a>
+        <a href="cpro1121.html">CPRO 1121</a>
+        <a href="cpro1122.html">CPRO 1122</a>
+        <a href="cpro1201.html">CPRO 1201</a>
+        <a href="cpro1301.html">CPRO 1301</a>
       </aside>
-    </main>
 
-    <footer>(C) Krisanne 2023.</footer>
+      <main>
+        <header><h1>CPRO 1101 | Front End Web Development I</h1></header>
+        <p>
+          I honestly thought that I would find this class more fun than the others at first, but HTML and CSS may be my least favourite languages to work with. 
+          It was just so different to deal with everything shifting on the page just because of one change. 
+          Since this was my first time dabbling into the complexities of web design, it was quite difficult to understand the flow of the code at first.
+          Fortunately, as I worked through creating this website, I started to get more familiar with it. 
+        </p>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="cpro1101_html_small.jpg">
+            <source media="(min-width: 930px)" srcset="cpro1101_html.jpg">
+            <img src="cpro1101_html.jpg" alt="HTML in Visual Studio Code" >
+          </picture>
+          <figcaption>Some of my HTML code for this website!</figcaption>
+        </figure>
+        <br>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="cpro1101_css_small.jpg">
+            <source media="(min-width: 930px)" srcset="cpro1101_css.jpg">
+            <img src="cpro1101_css.jpg" alt="CSS in Visual Studio Code" >
+          </picture>
+          <figcaption>Some of my CSS code for this website!</figcaption>
+        </figure>
+        <br>
+      </main>
+
+      <footer>
+        For any inquiries, reach me at:
+        <br>email | krisanne.apostol@rdpolytech.ca 
+        <br>phone | 403-848-3915
+        <br>
+        Copyright © 2023 Krisanne Apostol.
+      </footer>
+    </div>
+    <script>
+      function nav() {
+        var x = document.getElementById("nav");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
+      }
+      function openNav() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
   </body>
 </html>

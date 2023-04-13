@@ -1,105 +1,94 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="winter2023style.css">
+    <link rel="stylesheet" href="navstyle.css">
     <title>Winter 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>Winter 2023</li>
-        <li><a href="fall2023.html">Fall 2023</a></li>
-        <li><a href="winter2024.html">Winter 2024</a></li>
-        <li><a href="fall2024.html">Fall 2024</a></li>
-      </ul>
-    </nav>
+    <div class="parent">
+      <nav class="navigation" id="nav">
+        <a href="index.html">Home</a>
+        <a href="winter2023.html" class="active">Winter 2023</a>
+        <a href="fall2023.html">Fall 2023</a>
+        <a href="winter2024.html">Winter 2024</a>
+        <a href="fall2024.html">Fall 2024</a>
+        <a href="javascript:void(0)" class="hamburger" onclick="nav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
 
-    <header><h1>WINTER 2023</h1></header>
+      <span style="font-size:40px;cursor:pointer" class='openbtn' onclick="openNav()">&gt;</span>
 
-    <main>
-      <article>
-        <h2>Class Schedule</h2>
-        <table>
-          <thead>
-            <tr>
-              <td>&nbsp;</td>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <th>8:00 - 9:20</th>
-              <td></td>
-              <td></td>
-              <td>CPRO 1101</td>
-              <td></td>
-              <td>CPRO 1101</td>
-            </tr>
-
-            <tr>
-              <th>1:00 - 2:20</th>
-              <td></td>
-              <td>CPRO 1121</td>
-              <td></td>
-              <td>CPRO 1121</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th>3:30 - 4:50</th>
-              <td></td>
-              <td>CPRO 1201</td>
-              <td></td>
-              <td>CPRO 1201</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th>4:30 - 5:50</th>
-              <td>CPRO 1122</td>
-              <td></td>
-              <td>CPRO 1122</td>
-              <td></td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th>5:30 - 7:20</th>
-              <td></td>
-              <td>CPRO 1301</td>
-              <td></td>
-              <td>CPRO 1301</td>
-              <td></td>
-            </tr>
-
-          </tbody>
-        </table>
-      </article>
-
-      <aside>
-        <ul>
-          <li><a href="cpro1101.html">CPRO 1101</a></li>
-          <li><a href="cpro1121.html">CPRO 1121</a></li>
-          <li><a href="cpro1122.html">CPRO 1122</a></li>
-          <li><a href="cpro1201.html">CPRO 1201</a></li>
-          <li><a href="cpro1301.html">CPRO 1301</a></li>
-        </ul>
+      <aside class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="cpro1101.html">CPRO 1101</a>
+        <a href="cpro1121.html">CPRO 1121</a>
+        <a href="cpro1122.html">CPRO 1122</a>
+        <a href="cpro1201.html">CPRO 1201</a>
+        <a href="cpro1301.html">CPRO 1301</a>
       </aside>
 
-    </main>
+      <main>
+        <header><h1>WINTER 2023</h1></header>
+        <p>
+          Winter 2023 was the first semester ever of the Computer Programming Diploma at RDP. I would be lying if I said it went smoothly. I'm kidding! ...but not really.
+          <br>
+          <br>
+          Initially, the semester went pretty slow. We learned about the basics of each class such as discussing what makes a good website, understanding logical operators, and making sure we knew what variables and constants are.
+          However, as the semester kept moving, we suddenly had piles and piles of things to do. It seemed like there was something due at least every other day. 
+          <br>
+          <br>
+          Thankfully, the semester is almost over! Just one last stretch before the finish line. I think we've got this.
+        </p>
+        <h2>Class Schedule</h2>
+        <figure>
+          <picture>
+            <source media="(max-width: 929px)" srcset="winter2023_small.jpg">
+            <source media="(min-width: 930px)" srcset="winter2023.jpg">
+            <img src="winter2023.jpg" alt="Winter 2023 Class Schedule">
+          </picture>
+        </figure>
+        <br>
+      </main>
 
-    <footer>
-      (C) Krisanne 2023.
-    </footer>
-    
+      <footer>
+        For any inquiries, reach me at:
+        <br>email | krisanne.apostol@rdpolytech.ca 
+        <br>phone | 403-848-3915
+        <br>
+        Copyright © 2023 Krisanne Apostol.
+      </footer>
+    </div> 
+    <script>
+      function nav() {
+        var x = document.getElementById("nav");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
+      }
+      function openNav() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
   </body>
 </html>

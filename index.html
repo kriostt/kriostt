@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Krisanne's Computer Programming Diploma</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="navstyle.css">
+    <title>RDP Computer Programming Diploma</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">   
@@ -13,12 +14,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      html {
-        font-size: 12px;
-      }
       body {
-        margin: 0 auto;
+        margin-top: 0; 
+        margin-bottom: 0;
+        margin-right: auto;
+        margin-left: auto;
         font-family: 'Nunito'; 
         width: 100%;
       }
@@ -35,13 +37,13 @@
       header {
         font-family: 'Chonburi';
         text-align: center;
-        font-size: 2rem;
-        padding-top: 2rem;
+        font-size: 1.5rem;
+        padding: 10%;
       }
-      main figure {
+      figure {
         float: left;
       }
-      main > p {
+      p {
         padding: 50px;
         font-size: 1.8rem;
       }
@@ -53,110 +55,69 @@
         font-size: 1rem;
         display: flow-root;
       }
-      @media (max-width: 400px) {
-        .parent {
-          grid-template-columns: 100%;
-          grid-template-rows: auto;
-        }
-        .parent > * {
-          grid-column: 1 / -1 !important;
-          grid-row: auto !important;
-        }
-        .parent > header {
+      @media (max-width: 860px) {
+        header {
           font-size: 1rem;
-          padding-top: 5rem;
+          padding: 5rem;
         }
-        main figure {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .parent > p {
+        figure {
           font-size: 0.5rem;
-          margin: 10px;
-        }
-
-      }
-      /* NAVIGATION */
-      nav {
-        overflow: hidden;
-      }
-      nav a {
-        display: inline;
-        padding: 12px 16px;
-        color: black;
-        text-decoration: none;
-      }
-      nav > a.hamburger {
-        display: none;
-      }
-      nav > a:hover {
-        background-color: #F79B83;
-      }
-      nav > a.active {
-        background-color: #D9EEB6;
-      }
-      @media screen and (max-width: 600px) {
-        nav a:not(:first-child) { display: none; }
-        nav a { float: left; padding: 15px; }
-        nav a.hamburger { float: right; display: block; }
-      }
-      @media screen and (max-width: 600px) {
-        nav.responsive {position: relative;}
-        nav.responsive .hamburger {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-        nav.responsive a {
+          padding: 10px;
           float: none;
-          display: block;
-          text-align: left;
+          text-align: center;
+        }
+        p {
+          font-size: 1.5rem;
+          padding: 50px;
+          padding-top: 0;
         }
       }
+
     </style>
   </head>
 
   <body>
-    <div class="parent">
-      <nav class="navigation" id="nav">
-          <a href="index.html" class="active">Home</a>
-          <a href="winter2023.html">Winter 2023</a>
-          <a href="fall2023.html">Fall 2023</a>
-          <a href="winter2024.html">Winter 2024</a>
-          <a href="fall2024.html">Fall 2024</a>
-          <a href="javascript:void(0);" class="hamburger" onclick="nav()"></a>
-            ☰
-      </nav>
-
-      <header><h1>Red Deer Polytechnic </br> Computer Programming Diploma</h1></header>
+    <nav class="navigation" id="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="winter2023.html">Winter 2023</a>
+      <a href="fall2023.html">Fall 2023</a>
+      <a href="winter2024.html">Winter 2024</a>
+      <a href="fall2024.html">Fall 2024</a>
+      <a href="javascript:void(0)" class="hamburger" onclick="nav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
       
-      <main>
-        <figure>
-          <picture>
-            <source media="(max-width: 599px)" srcset="home_small.jpg"/>
-            <source media="(min-width: 600px)" srcset="home_large.jpg"/>
-            <img src="homeimg-default.jpeg" alt="Colleagues collaborating on code!" />
-          </picture>
-          <figcaption>Photo by <a href="https://unsplash.com/ko/@disruptxn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Desola Lanre-Ologun</a> on <a href="https://unsplash.com/photos/kwzWjTnDPLk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
-        </figure>
-        <p>
-          Hello! My name is Krisanne and I am currently in my first year of RDP's Computer Programming Diploma. 
-          I made this website to keep track of my progress in the program. 
-          It will consist of projects and assignments that highlight the purpose and learning outcomes of each class. 
-          I can't wait to make many more exciting things throughout the rest of it!
-          For now, you can find some of the work I've done in my first semester, Winter 2023. 
-        </p>
-      </main>
+    <main>
+      <header><h1>Red Deer Polytechnic <br> Computer Programming Diploma</h1></header>
+      <figure>
+        <picture>
+          <source media="(max-width: 599px)" srcset="home_small.jpg">
+          <source media="(min-width: 600px)" srcset="home_large.jpg">
+          <img src="home_large.jpg" alt="Computer setup with code">
+        </picture>
+        <figcaption>Photo by <a href="https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fotis Fotopoulos</a> on <a href="https://unsplash.com/photos/DuHKoV44prg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+      </figure>
+      <p>
+        Hello! My name is Krisanne and I am currently in my first year of RDP's Computer Programming Diploma. 
+        I made this website to keep track of my progress in the program. 
+        It will consist of some of my work from assignments and projects, as well as my thoughts on how I've been doing so far.
+        I hope to be able to add on to this website as I improve my skills and knowledge throughout the rest of the program.
+        There will surely be more exciting things to come!
+        <br>
+        <br>
+        For now, some of the work I've done in my first semester can be found in Winter 2023. 
+      </p>
+    </main>
 
-      <footer>
-        For any inquiries, reach me at:
-        </br>email | krisanne.apostol@rdpolytech.ca 
-        </br>phone | 403-848-3915
-        </br>
-        Copyright © 2023 Krisanne Apostol.
-      </footer>
+    <footer>
+      For any inquiries, reach me at:
+      <br>email | krisanne.apostol@rdpolytech.ca 
+      <br>phone | 403-848-3915
+      <br>
+      Copyright © 2023 Krisanne Apostol.
+    </footer>
 
-    </div>
     <script>
       function nav() {
         var x = document.getElementById("nav");

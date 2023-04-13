@@ -1,25 +1,104 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="navstyle.css">
     <title>Winter 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Courier+Prime&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {
+        margin-top: 0; 
+        margin-bottom: 0;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: 'Nunito'; 
+        width: 100%;
+        font-size: 12px;
+      }
+      main {
+        text-align: center;
+        padding: 20px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        background-color: #FFFFFF;
+        font-size: 1.5rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-family: 'Courier Prime';
+      }
+      header {
+        font-family: 'Chonburi';
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 10%;
+      }
+      footer {
+        background-color: #D9EEB6;
+        text-align: center;
+        font-size: 1rem;
+        display: flow-root;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 2rem;
+      }
+      @media (max-width: 630px) {
+        header {
+          font-size: 1rem;
+          padding: 5rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="winter2023.html">Winter 2023</a></li>
-        <li><a href="fall2023.html">Fall 2023</a></li>
-        <li>Winter 2024</li>
-        <li><a href="fall2024.html">Fall 2024</a></li>
-      </ul>
+    <nav class="navigation" id="nav">
+      <a href="index.html">Home</a>
+      <a href="winter2023.html">Winter 2023</a>
+      <a href="fall2023.html">Fall 2023</a>
+      <a href="winter2024.html" class="active">Winter 2024</a>
+      <a href="fall2024.html">Fall 2024</a>
+      <a href="javascript:void(0)" class="hamburger" onclick="nav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </nav>
 
     <header><h1>WINTER 2024</h1></header>
 
     <h2>Coming Soon!</h2>
+
+    <footer>
+      For any inquiries, reach me at:
+      <br>email | krisanne.apostol@rdpolytech.ca 
+      <br>phone | 403-848-3915
+      <br>
+      Copyright © 2023 Krisanne Apostol.
+    </footer>
+
+    <script>
+      function nav() {
+        var x = document.getElementById("nav");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
+      }
+    </script>
   </body>
 </html>
